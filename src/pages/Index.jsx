@@ -1,19 +1,32 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Text, VStack, Link, Spacer } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <Box>
+      {/* Navigation Bar */}
+      <Flex as="nav" bg="blue.500" color="white" padding="1.5rem" justifyContent="space-between" alignItems="center">
+        <Text fontSize="xl" fontWeight="bold">MyApp</Text>
+        <Spacer />
+        <Flex>
+          <Link href="#" margin="0 1rem" color="white">Home</Link>
+          <Link href="#" margin="0 1rem" color="white">About</Link>
+          <Link href="#" margin="0 1rem" color="white">Contact</Link>
+        </Flex>
+      </Flex>
+
+      {/* Main Content Area */}
+      <Container centerContent maxW="container.md" height="80vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+        <VStack spacing={4}>
+          <Text fontSize="2xl">Welcome to MyApp</Text>
+          <Text>This is a basic structure of a React app with Chakra UI.</Text>
+        </VStack>
+      </Container>
+
+      {/* Footer */}
+      <Box as="footer" bg="blue.500" color="white" padding="1rem" textAlign="center">
+        <Text>&copy; 2023 MyApp. All rights reserved.</Text>
+      </Box>
+    </Box>
   );
 };
 
